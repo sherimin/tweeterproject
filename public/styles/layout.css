@@ -34,10 +34,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 90%;
-  margin-left: 2.5em;
-
-  background-color: rgb(205, 138, 15);
+  background-color: #f4f1ec;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px;
 
  }
 
