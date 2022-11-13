@@ -1,0 +1,30 @@
+.new-tweet {
+    display:flex;
+    width: 90%;
+    font-family: sans-serif;
+    flex-direction: row;
+}
+
+textarea {
+    background-color: f4f1ec;
+    border: hidden;
+    border-bottom: 3px black;
+    margin-bottom: 5px;
+}
+
+
+.new-tweet form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-tweet button {
+    background-color:#4056A1;
+    color:whitesmoke;
+    font-family: 'Bungee', cursive;
+
+}
+
+.invalid {
+    color: red;
+}
