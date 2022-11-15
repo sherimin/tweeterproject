@@ -1,14 +1,15 @@
 .new-tweet {
     display:flex;
     width: 90%;
-    font-family: sans-serif;
-    flex-direction: row;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    background-color: #f4f1ec;
 }
 
 textarea {
-    background-color: f4f1ec;
+    background-color: #f4f1ec;
     border: hidden;
-    border-bottom: 3px black;
+    border-bottom: 5px solid black;
     margin-bottom: 5px;
 }
 
@@ -18,13 +19,25 @@ textarea {
     flex-direction: column;
 }
 
+.new-tweet div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .new-tweet button {
     background-color:#4056A1;
     color:whitesmoke;
     font-family: 'Bungee', cursive;
+    border-style: groove;
+    margin-top: 5px;
+}
 
+.new-tweet output {
+    font-family: 'Bungee', cursive;
 }
 
 .invalid {
     color: red;
 }
+
