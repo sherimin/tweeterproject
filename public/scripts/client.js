@@ -5,7 +5,6 @@
  */
 
 $(document).ready(function() {
-
 // Fake data taken from initial-tweets.json
   const data = [
     {
@@ -38,8 +37,8 @@ $(document).ready(function() {
     // takes return value and appends it to the tweets container
     for (let tweet of tweets) {
         let $tweet = createTweetElement(tweet);
-        console.log($tweet)
-        $('#tweets-container').append($tweet)
+        //console.log($tweet);
+        $('#tweet-container').append($tweet);
     }
   }
   
@@ -80,4 +79,4 @@ $(document).ready(function() {
 
   renderTweets(data);
 
-})
+});
