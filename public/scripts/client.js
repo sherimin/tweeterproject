@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(function() {
 // Fake data taken from initial-tweets.json
   const data = [
@@ -32,7 +33,6 @@ $(document).ready(function() {
   ]
 
   //Create an Ajax POST request
-
   $('#new-tweet-form').submit(function( event ) {
     //prevent the default submission behaviour
     event.preventDefault();
@@ -40,6 +40,19 @@ $(document).ready(function() {
     const tweet = $(this).serialize();
     $.post("/tweets/", tweet);
   })
+
+  //Receive array of tweets (JSON)
+  const loadTweets = () => {
+    $.get("/tweets/", function(newTweets) {
+      renderTweets(newTweets.reverse());
+    })
+  };
+
+  loadTweets();
+
+
+
+
 
   const renderTweets = function(tweets) {
     // loops through tweets
@@ -71,7 +84,7 @@ $(document).ready(function() {
         </div>
         
         <footer class="tweeter-footer">
-          <span class="date"> ${tweetInput.created_at} </span>
+          <span class="date"> ${timeago.format(tweetInput.created_at)} </span>
           <div class="icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
