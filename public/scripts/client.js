@@ -31,13 +31,22 @@ $(document).ready(function() {
     }
   ]
 
+  //Create an Ajax POST request
+
+  $('#new-tweet-form').submit(function( event ) {
+    //prevent the default submission behaviour
+    event.preventDefault();
+
+    const tweet = $(this).serialize();
+    $.post("/tweets/", tweet);
+  })
+
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     for (let tweet of tweets) {
         let $tweet = createTweetElement(tweet);
-        //console.log($tweet);
         $('#tweet-container').append($tweet);
     }
   }
@@ -80,3 +89,7 @@ $(document).ready(function() {
   renderTweets(data);
 
 });
+
+
+
+
