@@ -7,8 +7,25 @@
 
 $(document).ready(function() {
 
+  //Add escape function to prevent using untrusted text
+  const escape = str => {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
+  const renderTweets = function(tweets) {
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+    for (let tweet of tweets) {
+      let $tweet = createTweetElement(tweet);
+        $('#tweet-container').prepend($tweet);
+      }
+    }
+
   //Create an Ajax POST request
-  $('#new-tweet-form').submit(function( event ) {
+  $('#new-tweet-form').submit(function(event) {
     //prevent the default submission behaviour
     event.preventDefault();
 
@@ -35,20 +52,9 @@ $(document).ready(function() {
     .then((newTweets) => {
       renderTweets(newTweets);
     })
-
   };
 
- 
 
-  const renderTweets = function(tweets) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    for (let tweet of tweets) {
-        let $tweet = createTweetElement(tweet);
-        $('#tweet-container').append($tweet);
-    }
-  }
   
 
 
@@ -66,7 +72,7 @@ $(document).ready(function() {
         </div>
       </header>
         <div class="tweet-text">
-          ${tweetInput.content.text}
+          ${escape(tweetInput.content.text)}
         </div>
         
         <footer class="tweeter-footer">
@@ -82,10 +88,8 @@ $(document).ready(function() {
 
     return $tweet;
   };
-
   //renderTweets(data);
   loadTweets();
-
 });
 
 

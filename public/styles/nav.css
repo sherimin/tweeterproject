@@ -4,8 +4,8 @@ nav {
     align-items: center;
     height: 120px;
     width: 100vw;
-    background-color: rgb(205, 138, 15);
-    background-image: url(http://www.transparenttextures.com/patterns/crissxcross.png);
+    background-color: #4056A1;
+    /*background-image: url(http://www.transparenttextures.com/patterns/crissxcross.png);*/
     color: #FFFFFF;
     padding: 1.5em;
     position: fixed;
