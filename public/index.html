@@ -30,13 +30,15 @@
     <!-- timeago library -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
 
-      <span>tweeter</span>
+      <span class="tweeter">tweeter</span>
 
       <div class="write">
         <p><b>Write</b> a new tweet</p>
@@ -57,9 +59,24 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- <h2 class="tweet-header">Compose Tweet</h2> -->
+      <section class="error-msg" style="color: red">
+        <span id="error-msg-empty">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          There is no tweet content.
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </span>
+
+        <span id="error-msg-too-long">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Please limit your tweet to 140 characters.
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </span>
+      </section>
+
+
       <section class="new-tweet">
         <form action="/tweets" method="POST">
-        <!-- <h2>Compose Tweet</h2> -->
           <form id="new-tweet-form">
             <!-- <label for="tweet-text">What are you humming about?</label> -->
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -67,10 +84,15 @@
               <button id="submit">Tweet</button>
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
+            </form>
           </form>
       </section>
      
       <section id="tweet-container"></section>
+      <!-- add a toggle button -->
+      <footer>
+        <button id="toggle"></button>
+      </footer>
     </main>
   </body>
 </html>

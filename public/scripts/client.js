@@ -7,6 +7,9 @@
 
 $(document).ready(function() {
 
+  //Hide error messages by default
+  $(".error-msg").hide();
+
   //Add escape function to prevent using untrusted text
   const escape = str => {
     let div = document.createElement('div');
@@ -25,22 +28,25 @@ $(document).ready(function() {
     }
 
   //Create an Ajax POST request
-  $('#new-tweet-form').submit(function(event) {
+  $("#new-tweet-form").on("submit", function (event) {
     //prevent the default submission behaviour
     event.preventDefault();
 
     const maxCharacters = 140;
     const inputLength = $(this).find("#tweet-text").val().length;
 
-    if (!inputLength) {
-      return alert("No tweet content.")
-    }
 
-    if (inputLength > maxCharacters) {
-      return alert("Your tweet is too long.")
+
+    if (!inputLength) {
+      $("#error-msg-empty").slideDown("slow");
+      return;
+    } else if (inputLength > maxCharacters) {
+      $("#error-msg-too-long").slideDown("slow");
+      return;
+    } else {
+      const tweet = $(this).serialize();
+      $.post("/tweets/", tweet);
     }
-    const tweet = $(this).serialize();
-    $.post("/tweets/", tweet);
   })
 
   //Receive array of tweets (JSON)
@@ -54,10 +60,20 @@ $(document).ready(function() {
     })
   };
 
+  //toggle
+  $('.write').on('click', () => {
+    $('.new-tweet').slideToggle('slow', () => {
+      $("textarea").focus();
+    });
+  })
+
+  $('#toggle').on('click', () => {
+    //jump back to the top of the page
+
+  })
+
 
   
-
-
   const createTweetElement = tweetInput => {
     //return a tweet <article> element with entire HTML
     let $tweet = $(`<article class="tweet">
