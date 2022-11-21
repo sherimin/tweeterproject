@@ -35,8 +35,6 @@ $(document).ready(function() {
     const maxCharacters = 140;
     const inputLength = $(this).find("#tweet-text").val().length;
 
-
-
     if (!inputLength) {
       $("#error-msg-empty").slideDown("slow");
       return;
@@ -45,7 +43,10 @@ $(document).ready(function() {
       return;
     } else {
       const tweet = $(this).serialize();
-      $.post("/tweets/", tweet);
+      $.post("/tweets/", tweet)
+      .then((tweet) => {
+        loadTweets();
+      })
     }
   })
 
