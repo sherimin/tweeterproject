@@ -7,8 +7,8 @@ nav {
     background-color: #4056A1;
     color: #FFFFFF;
     padding: 1.5em;
-    /*position: fixed;*/
-
+    position: fixed;
+    z-index: 1;
 }
 
 

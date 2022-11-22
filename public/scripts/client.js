@@ -8,7 +8,8 @@
 $(document).ready(function() {
 
   //Hide error messages by default
-  $(".error-msg").hide();
+  $(".error-msg-empty").hide();
+  $(".error-msg-too-long").hide();
 
   //Add escape function to prevent using untrusted text
   const escape = str => {
@@ -36,12 +37,15 @@ $(document).ready(function() {
     const inputLength = $(this).find("#tweet-text").val().length;
 
     if (!inputLength) {
-      $("#error-msg-empty").slideDown("slow");
+      $(".error-msg-empty").slideDown("slow");
+      $(".error-msg-long").slideUp();
       return;
     } else if (inputLength > maxCharacters) {
-      $("#error-msg-too-long").slideDown("slow");
+      $(".error-msg-too-long").slideDown("slow");
+      $(".error-msg-empty").slideUp();
       return;
     } else {
+
       const tweet = $(this).serialize();
       $.post("/tweets/", tweet)
       .then((tweet) => {

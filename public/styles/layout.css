@@ -42,3 +42,27 @@ body {
  .name {
   font-size: 40px;
  }
+
+
+ @media (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 60%;
+    float: center;
+    margin: 220px 0px 0px 3rem;
+  }
+
+  body header {
+    width: 35%;
+    margin: 200px 0px 0px 3rem;
+  }
+
+  #tweet-container {
+    width: 90%;
+  }
+
+ }
