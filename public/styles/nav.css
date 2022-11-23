@@ -26,4 +26,18 @@ nav span {
     font-size: 1em;
 }
 
+.button {
+    border-radius: 50%;
+    color: red;
+    height: 50px;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        background-color: transparent;
+    }
+
+  
+}
+
 

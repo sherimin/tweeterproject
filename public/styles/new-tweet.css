@@ -45,13 +45,13 @@ textarea {
 .error-msg-empty {
     border: 3px solid red;
     padding: 10px;
-    color: red
+    color: red;
 }
 
 .error-msg-too-long {
     border: 3px solid red;
     padding: 10px;
-    color: red
+    color: red;
 }
 
 

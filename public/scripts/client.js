@@ -38,11 +38,11 @@ $(document).ready(function() {
 
     if (!inputLength) {
       $(".error-msg-empty").slideDown("slow");
-      $(".error-msg-long").slideUp();
+      $(".error-msg-too-long").hide("fast");
       return;
     } else if (inputLength > maxCharacters) {
       $(".error-msg-too-long").slideDown("slow");
-      $(".error-msg-empty").slideUp();
+      $(".error-msg-empty").hide("fast");
       return;
     } else {
 
@@ -65,15 +65,16 @@ $(document).ready(function() {
     })
   };
 
-  //toggle
+  //hide or show the new tweet text are when click
   $('.write').on('click', () => {
     $('.new-tweet').slideToggle('slow', () => {
       $("textarea").focus();
     });
   })
 
+  //jump back to the top of the page when click
   $('#toggle').on('click', () => {
-    //jump back to the top of the page
+
 
   })
 
