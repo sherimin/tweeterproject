@@ -22,6 +22,8 @@ $(document).ready(function() {
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
+    $("#tweet-container").empty();
+    
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
         $('#tweet-container').prepend($tweet);
@@ -45,6 +47,8 @@ $(document).ready(function() {
       $(".error-msg-empty").hide("fast");
       return;
     } else {
+      $(".error-msg-too-long").hide();
+      $(".error-msg-empty").hide();
 
       const tweet = $(this).serialize();
       $.post("/tweets/", tweet)
