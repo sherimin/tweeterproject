@@ -23,7 +23,7 @@ $(document).ready(function() {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     $("#tweet-container").empty();
-    
+
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
         $('#tweet-container').prepend($tweet);
@@ -54,6 +54,7 @@ $(document).ready(function() {
       $.post("/tweets/", tweet)
       .then((tweet) => {
         loadTweets();
+        $(this).find("#tweet-text").val("");
       })
     }
   })
@@ -75,13 +76,6 @@ $(document).ready(function() {
       $("textarea").focus();
     });
   })
-
-  //jump back to the top of the page when click
-  $('#toggle').on('click', () => {
-
-
-  })
-
 
   
   const createTweetElement = tweetInput => {
