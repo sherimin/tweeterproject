@@ -10,11 +10,22 @@ This repository is the starter code for the project: Students will fork and clon
 3. When the width of main page shrinks down to below 1024 px, the page switches layout to enhance readability. 
 
 ### Screenshots
-!["Screenshot of Basic functions"]
-(https://github.com/sherimin/tweeterproject/blob/master/docs/Screen%20Recording%202022-11-26%20at%201.10.46%20PM.mov)
 
-!["Screenshot of main page on smaller screens (width below 1024px)"]
+Main page on screens below width of 1024px
+!["Tweeter_small_layout"]
 (https://github.com/sherimin/tweeterproject/blob/master/docs/Tweeter_small_layout.png)
+
+Main page on screens above width of 1034px
+!["Tweeter_large_layout"]
+(https://github.com/sherimin/tweeterproject/blob/master/docs/tweeter_large_layout.jpeg)
+
+Error message when there is no tweet input
+!["Error_empty"]
+(https://github.com/sherimin/tweeterproject/blob/master/docs/Error_empty.png)
+
+Error message when tweet input is more than 140 characters
+!["Error_toolong"]
+(https://github.com/sherimin/tweeterproject/blob/master/docs/Error_toolong.png)
 
 ## Getting Started
 
