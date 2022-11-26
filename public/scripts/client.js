@@ -55,6 +55,7 @@ $(document).ready(function() {
       .then((tweet) => {
         loadTweets();
         $(this).find("#tweet-text").val("");
+        $(this).find(".counter").val(maxCharacters);
       })
     }
   })
