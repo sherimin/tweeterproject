@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +13,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -26,36 +26,42 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
+
+ main {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #f4f1ec;
   width: 100%;
   padding-top: 50px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   margin-bottom: 30px;
-}
+ }
 
-.name {
+ .name {
   font-size: 40px;
-}
+ }
 
-@media (min-width: 1024px) {
+
+ @media (min-width: 1024px) {
   body {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .container {
     width: 60%;
     float: center;
     margin: 200px 0px 30px 3rem;
   }
+
   body header {
     width: 35%;
     margin: 200px 0px 0px 3rem;
   }
+
   #tweet-container {
     width: 90%;
   }
-}
+
+ }

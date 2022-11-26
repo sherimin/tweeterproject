@@ -1,0 +1,58 @@
+.new-tweet {
+    display:flex;
+    width: 90%;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-direction: column;
+    background-color: #f4f1ec;
+}
+
+textarea {
+    background-color: #f4f1ec;
+    border: hidden;
+    border-bottom: 5px solid black;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+
+.new-tweet form {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-tweet div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.new-tweet button {
+    background-color:#4056A1;
+    color:whitesmoke;
+    font-family: 'Bungee', cursive;
+    border-style: groove;
+    margin-top: 5px;
+}
+
+.new-tweet output {
+    font-family: 'Bungee', cursive;
+}
+
+.invalid {
+    color: red;
+}
+
+.error-msg-empty {
+    border: 3px solid red;
+    padding: 10px;
+    color: red;
+}
+
+.error-msg-too-long {
+    border: 3px solid red;
+    padding: 10px;
+    color: red;
+}
+
+
+

@@ -108,7 +108,7 @@ $(document).ready(function() {
 
     return $tweet;
   };
-  //renderTweets(data);
+  //load initial tweets
   loadTweets();
 });
 

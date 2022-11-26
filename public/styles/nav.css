@@ -1,38 +1,32 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 120px;
-    width: 100vw;
-    background-color: #4056A1;
-    color: #FFFFFF;
-    padding: 1.5em;
-    position: fixed;
-    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  position: fixed;
+  z-index: 1;
 }
 
-
 nav span {
-    font-family: 'Bungee', cursive;
-    font-size: 1.8em;
+  font-family: "Bungee", cursive;
+  font-size: 1.8em;
 }
 
 .write {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-end;
-    font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-end;
+  font-size: 1em;
 }
-
 
 @media (max-width: 1024px) {
-    nav {
-        background-color: transparent;
-    }
-
-  
+  nav {
+    background-color: transparent;
+  }
 }
-
-
