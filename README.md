@@ -12,20 +12,16 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 
 Main page on screens below width of 1024px
-!["Tweeter_small_layout"]
-(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Tweeter_small_layout.png)
+!["Tweeter_small_layout"](https://github.com/sherimin/tweeterproject/blob/master/docs/Tweeter_small_layout.png?raw=true)
 
-Main page on screens above width of 1034px and form toggle
-!["Tweeter_large_layout"]
-(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/tweeter_large_layout.jpeg)
+Main page on screens above width of 1024px and form toggle
+!["Tweeter_large_layout"](https://github.com/sherimin/tweeterproject/blob/master/docs/tweeter_large_layout.jpeg?raw=true)
 
 Error message when there is no tweet input
-!["Error_empty"]
-(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Error_empty.png)
+!["Error_empty"](https://github.com/sherimin/tweeterproject/blob/master/docs/Error_empty.png?raw=true)
 
 Error message when tweet input is more than 140 characters
-!["Error_toolong"]
-(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Error_toolong.png)
+!["Error_toolong"](https://github.com/sherimin/tweeterproject/blob/master/docs/Error_toolong.png?raw=true)
 
 ## Getting Started
 
