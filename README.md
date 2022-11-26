@@ -9,23 +9,23 @@ This repository is the starter code for the project: Students will fork and clon
 2. An error message will display at the top if no tweet content is present or the tweet is too long.
 3. When the width of main page shrinks down to below 1024 px, the page switches layout to enhance readability. 
 
-### Screenshots
+## Screenshots
 
 Main page on screens below width of 1024px
 !["Tweeter_small_layout"]
-(https://github.com/sherimin/tweeterproject/blob/master/docs/Tweeter_small_layout.png)
+(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Tweeter_small_layout.png)
 
-Main page on screens above width of 1034px
+Main page on screens above width of 1034px and form toggle
 !["Tweeter_large_layout"]
-(https://github.com/sherimin/tweeterproject/blob/master/docs/tweeter_large_layout.jpeg)
+(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/tweeter_large_layout.jpeg)
 
 Error message when there is no tweet input
 !["Error_empty"]
-(https://github.com/sherimin/tweeterproject/blob/master/docs/Error_empty.png)
+(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Error_empty.png)
 
 Error message when tweet input is more than 140 characters
 !["Error_toolong"]
-(https://github.com/sherimin/tweeterproject/blob/master/docs/Error_toolong.png)
+(https://raw.githubusercontent.com/sherimin/tweeterproject/master/docs/Error_toolong.png)
 
 ## Getting Started
 
