@@ -4,6 +4,8 @@
   display: flex;
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", sans-serif;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .tweet {
